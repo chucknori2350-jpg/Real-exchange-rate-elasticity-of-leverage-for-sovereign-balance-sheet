@@ -22,7 +22,7 @@ where `q` is the chosen exchange-rate driver,
 = \frac{\partial \ln L}{\partial \ln q}-\frac{\partial \ln A}{\partial \ln q}.
 \]
 
-This is a **local accounting sensitivity** implied by the balance sheet at a point in time. It is **not** a regression coefficient. IMF balance-sheet work explicitly motivates this stock-based approach and emphasizes sectoral balance sheets, currency mismatches, and off-balance-sheet exposures. Goldstein–Turner’s mismatch concept also depends on the sensitivity of assets and liabilities, and more broadly future income and expenditure flows, to exchange-rate changes. citeturn786757view0turn548280view0turn548280view1
+This is a **local accounting sensitivity** implied by the balance sheet at a point in time. It is **not** a regression coefficient. IMF balance-sheet work explicitly motivates this stock-based approach and emphasizes sectoral balance sheets, currency mismatches, and off-balance-sheet exposures. Goldstein–Turner’s mismatch concept also depends on the sensitivity of assets and liabilities, and more broadly future income and expenditure flows, to exchange-rate changes. 
 
 ---
 

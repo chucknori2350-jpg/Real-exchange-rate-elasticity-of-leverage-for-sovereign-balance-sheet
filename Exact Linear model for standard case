@@ -1,0 +1,19 @@
+
+from reer_leverage_elasticity import LinearOneForOneRevaluationBalanceSheet
+
+model = LinearOneForOneRevaluationBalanceSheet(
+    liabilities_domestic_fixed=60.0,
+    liabilities_fx_notional=20.0,
+    assets_domestic_fixed=120.0,
+    assets_fx_notional=30.0,
+)
+
+q = 1.5  # non-trivial real exchange rate
+scenario = model.scenario(q)
+
+print(scenario["liabilities"])                  # 90.0
+print(scenario["assets"])                       # 165.0
+print(scenario["leverage"])                     # 0.545454...
+print(scenario["liability_fx_share"])           # 0.333333...
+print(scenario["asset_fx_share"])               # 0.272727...
+print(scenario["leverage_real_fx_elasticity"])  # 0.060606...

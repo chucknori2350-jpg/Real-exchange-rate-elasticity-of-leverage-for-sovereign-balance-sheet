@@ -1,0 +1,28 @@
+from reer_leverage_elasticity import (
+    ExposureComponent,
+    SideBreakdown,
+    BalanceSheetSnapshot,
+    LinearOneForOneRevaluationBalanceSheet,
+    build_standard_snapshot_from_current_values,
+)
+
+# 1) Generic institutional snapshot:
+assets = SideBreakdown.from_iterable([
+    ExposureComponent("domestic_assets", 100.0, 0.0),
+    ExposureComponent("export_receivables_partial", 50.0, 0.6),
+])
+
+liabilities = SideBreakdown.from_iterable([
+    ExposureComponent("local_debt", 70.0, 0.0),
+    ExposureComponent("fx_debt", 30.0, 1.0),
+    ExposureComponent("fx_linked_local_bond", 20.0, 0.8),
+])
+
+snapshot = BalanceSheetSnapshot(
+    assets=assets,
+    liabilities=liabilities,
+    label="Example sovereign/corporate sector snapshot",
+)
+
+print(snapshot.summary())
+print(snapshot.leverage_real_fx_elasticity)
